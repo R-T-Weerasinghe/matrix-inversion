@@ -1,2 +1,4 @@
-# matrix-inversion
-inverse matrices without libraries with pure js
+## matrix-inversion
+#inverse matrices without libraries with pure js
+
+
