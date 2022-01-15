@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="matrix-inversion.js"></script>
+    <script>
+        function write_matrix() {
+            let arr = document.getElementById("matrix").value.split(" ").map(Number);   // array.prototype.map() method
+            let r = parseInt(document.getElementById("rows").value);
+            let c = parseInt(document.getElementById("cols").value);
+            let matrixObj = create_matrix(r, c, arr);
+            let minorsObj = return_minors();
+            let adjugateObj = return_adjugate();
+            let inverseObj = return_inverse();
+
+            console.log("matrix object:", matrixObj);
+            console.log("minors object:", minorsObj);
+            console.log("adjugate object:", adjugateObj);
+            console.log("inverse object:", inverseObj);
+        }
+
+    </script>
+</head>
+
+<body>
+    <table style="border-spacing: 10px;">
+        <tr>
+            <td><label>Matrix:</label></td>
+            <td><input type="text" id="matrix" size="50" /></td>
+        </tr>
+        <tr>
+            <td><label>Rows:</label></td>
+            <td><input type="text" id="rows" size="1"/></td>
+        </tr>
+        <tr>
+            <td><label>Columns:</label></td>
+            <td><input type="text" id="cols" size="1"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" id="btn" value="create matrix" onclick="write_matrix()" />
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
